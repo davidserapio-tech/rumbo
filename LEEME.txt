@@ -1,0 +1,24 @@
+RUMBO · versión Bootstrap 5
+============================
+
+Archivos
+  index.html          Estructura de la página (menú, ventana emergente, avisos) y los enlaces a Bootstrap
+  css/estilos.css     Colores y tipografía de Rumbo sobre Bootstrap
+  js/datos.js         Preguntas, intereses, habilidades y catálogo de carreras (datos de ejemplo)
+  js/ilustraciones.js Dibujos SVG de las preguntas
+  js/puntaje.js       Cálculo de afinidad (55% intereses, 25% habilidades, 20% entorno)
+  js/app.js           Las pantallas y la navegación
+  img/                Foto de la portada y logo
+
+Cómo se usa Bootstrap
+  - Se carga por CDN (links en index.html): bootstrap 5.3.3 y bootstrap-icons 1.11.3
+  - Grilla: row / col-6 / row-cols-2 · Cards: card · Botones: btn, btn-primary, btn-outline-primary
+  - Formularios: form-control, form-select, btn-check · Componentes: modal, toast, accordion, progress, list-group, badge
+  - Utilidades: d-grid, gap-3, px-3, pt-4, text-secondary, etc.
+
+Cómo subirlo a GitHub Pages
+  1. Entrá al repositorio "rumbo" en GitHub.
+  2. Add file > Upload files.
+  3. Arrastrá TODO el contenido de esta carpeta (index.html y las carpetas css, js e img). Si ya existe un index.html, se reemplaza.
+  4. Commit changes.
+  5. Esperá 1 o 2 minutos y abrí https://davidserapio-tech.github.io/rumbo/
