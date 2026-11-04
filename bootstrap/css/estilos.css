@@ -1,0 +1,107 @@
+/* ============================================================
+   ESTILOS PROPIOS DE RUMBO
+   Bootstrap hace casi todo el trabajo. Acá solo cambiamos los
+   colores y la tipografía para que se vea como el diseño de Figma.
+   ============================================================ */
+
+/* 1) Colores de Rumbo: pisamos las variables de Bootstrap */
+:root {
+  --bs-body-font-family: 'Outfit', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --bs-body-bg: #F7F5F0;          /* fondo crema */
+  --bs-body-color: #111821;       /* texto */
+  --bs-primary: #0E6E78;          /* verde azulado */
+  --bs-primary-rgb: 14, 110, 120;
+  --bs-link-color: #0E6E78;
+  --bs-border-radius: .9rem;
+  --rumbo-card: #94CBD3;          /* celeste de las tarjetas */
+  --rumbo-suave: #E5E3DF;
+  --rumbo-linea: #DAD7D0;
+  --rumbo-oscuro: #07434A;
+}
+
+/* Botones primarios con el color de la marca */
+.btn-primary {
+  --bs-btn-bg: #0E6E78; --bs-btn-border-color: #0E6E78;
+  --bs-btn-hover-bg: #0A545C; --bs-btn-hover-border-color: #0A545C;
+  --bs-btn-active-bg: #07434A; --bs-btn-active-border-color: #07434A;
+  --bs-btn-disabled-bg: #0E6E78; --bs-btn-disabled-border-color: #0E6E78;
+}
+.btn-outline-primary {
+  --bs-btn-color: #0E6E78; --bs-btn-border-color: #0E6E78;
+  --bs-btn-hover-bg: #0E6E78; --bs-btn-hover-border-color: #0E6E78;
+  --bs-btn-active-bg: #0E6E78; --bs-btn-active-border-color: #0E6E78; --bs-btn-active-color: #fff;
+  --bs-btn-hover-color: #fff;
+}
+.btn { border-radius: 999px; min-height: 44px; font-weight: 500; }
+.btn-lg { font-size: 1.05rem; }
+.text-primary { color: #0E6E78 !important; }
+.bg-primary { background-color: #0E6E78 !important; }
+
+/* Foco y acordeón con el color de la marca (Bootstrap los trae en azul) */
+:root { --bs-focus-ring-color: rgba(14, 110, 120, .25); }
+.form-control:focus, .form-select:focus { border-color: #0E6E78; box-shadow: 0 0 0 .25rem rgba(14, 110, 120, .2); }
+.btn-check:checked + .btn-outline-primary { background: #0E6E78; color: #fff; }
+.accordion { --bs-accordion-active-bg: #E5E3DF; --bs-accordion-active-color: #07434A; --bs-accordion-btn-focus-box-shadow: 0 0 0 .25rem rgba(14, 110, 120, .2); --bs-accordion-bg: #fff; --bs-accordion-border-radius: 1rem; --bs-accordion-inner-border-radius: calc(1rem - 1px); }
+.alert-info { --bs-alert-bg: #E1EEF2; --bs-alert-border-color: #B7D7E5; --bs-alert-color: #07434A; }
+
+body { font-weight: 400; overflow-x: hidden; }
+h1, h2, h3 { font-weight: 500; letter-spacing: -.01em; }
+
+/* 2) Ancho de "celular" centrado: así se ve igual en compu y en el cel */
+.contenedor { width: 100%; max-width: 520px; margin: 0 auto; padding-left: 16px; padding-right: 16px; }
+main.contenedor { padding-bottom: 96px; min-height: 100vh; background: var(--bs-body-bg); }
+main:focus { outline: none; }
+
+/* 3) Encabezado y menú de abajo */
+.rumbo-header { background: var(--bs-body-bg); border-bottom: 1px solid var(--rumbo-linea); height: 56px; display: flex; align-items: center; z-index: 1020; }
+.btn-redondo { width: 40px; height: 40px; min-height: 40px; padding: 0; display: inline-block; }
+.rumbo-nav { background: #fff; border-top: 1px solid var(--rumbo-linea); padding-bottom: env(safe-area-inset-bottom, 0) !important; }
+.btn-nav { border-radius: 0; display: flex; flex-direction: column; align-items: center; gap: 0; font-size: .75rem; color: #4A5560; padding: 6px 0; min-height: 56px; }
+.btn-nav i { font-style: normal; font-size: 1.25rem; line-height: 1.2; }
+.btn-nav.activo { color: #0E6E78; font-weight: 600; }
+.btn-nav-test b { width: 48px; height: 48px; margin-top: -22px; border-radius: 50%; background: #0E6E78; color: #fff; display: grid; place-items: center; font-size: 1.8rem; font-weight: 400; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+
+/* 4) Portada (hero) */
+.hero { position: relative; overflow: hidden; color: #fff; background: linear-gradient(155deg, #05363C 0%, #0A545C 45%, #0E6E78 100%); min-height: 420px; margin: 0; padding: 36px 20px 0; }
+.hero h1 { font-size: 2.2rem; font-weight: 600; max-width: 8em; }
+.hero p { font-size: 1.05rem; max-width: 12em; }
+.hero p.small { max-width: none; font-size: .85rem; }
+.hero .copia { position: relative; z-index: 2; }
+.hero img { position: absolute; right: 0; bottom: 0; height: 88%; max-width: 62%; object-fit: contain; object-position: bottom right; }
+.paso-card { background: var(--rumbo-card); border: 0; border-radius: 1.4rem; }
+.paso-num { font-size: 2.4rem; font-weight: 300; line-height: 1; }
+
+/* 5) Pie de página */
+.pie { background: #0E6E78; color: #fff; margin: 0; padding: 28px 20px 40px; }
+.pie a, .pie .btn-link { color: #fff; text-decoration: none; }
+
+/* 6) Preguntas */
+.barra-bloques { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.barra-bloques .progress { height: 6px; background: var(--rumbo-suave); }
+.barra-bloques .progress-bar { background: #0E6E78; }
+.opcion { text-align: left; border: 1.5px solid #0E6E78; border-radius: 1.1rem; background: transparent; color: #0E6E78; padding: 14px 16px; width: 100%; font-weight: 500; transition: background .12s; }
+.opcion:hover { background: rgba(14, 110, 120, .08); }
+.opcion.activa { background: #0E6E78; color: #fff; }
+.opcion-img { display: flex; gap: 12px; align-items: center; padding: 8px 14px 8px 8px; }
+.opcion-img .art { flex: none; width: 112px; }
+.tarjeta-img { text-align: left; border: 1.5px solid var(--rumbo-linea); border-radius: 1.1rem; background: #fff; padding: 8px; width: 100%; height: 100%; font-weight: 500; }
+.tarjeta-img.activa { border-color: #0E6E78; box-shadow: 0 0 0 2px #0E6E78; }
+.tarjeta-img span { display: block; padding: 8px 4px 2px; font-size: .95rem; }
+
+/* 7) Ilustraciones: fondo suave y contorno oscuro (como en Figma) */
+.art { aspect-ratio: 4 / 3; border-radius: 14px; overflow: hidden; background: #EAF2F0; min-width: 0; max-width: 100%; }
+.art svg { display: block; width: 100%; height: 100%; }
+.art svg rect, .art svg circle, .art svg ellipse, .art svg path:not([fill="none"]) { stroke: #111821; stroke-width: 1.3; stroke-linejoin: round; }
+
+/* 8) Resultados */
+.tarjeta-perfil { background: var(--rumbo-card); border: 0; border-radius: 1.4rem; }
+.pct { font-size: 1.6rem; font-weight: 600; color: #0E6E78; }
+.tarjeta-carrera { background: #fff; border: 1px solid var(--rumbo-linea); border-radius: 1.4rem; }
+.etiqueta { background: var(--rumbo-suave); color: #111821; font-weight: 400; border-radius: 999px; padding: .45em .8em; white-space: normal; text-align: left; }
+.etiqueta-p { background: #C8DAD8; }
+
+/* 9) Letra grande (botón Aa) */
+html.letra-grande { font-size: 118%; }
+
+/* 10) Movimiento reducido */
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
